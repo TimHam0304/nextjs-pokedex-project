@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+background-color-rgb is bg-neutral-100 from tailwind
+*/
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-color-rgb: 255, 255, 255;
+}
+/*bg color hex: #171717 (900 neutral)*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-color-rgb: 23, 23, 23;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-color-rgb));
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

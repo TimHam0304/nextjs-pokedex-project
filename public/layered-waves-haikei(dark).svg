@@ -1,0 +1,8 @@
+<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<defs><linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4f46e5; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3; stop-opacity:1" />
+    </linearGradient></defs>
+<path d="M0 525L37.5 518.5C75 512 150 499 225 492.5C300 486 375 486 450 493.3C525 500.7 600 515.3 675 512.5C750 509.7 825 489.3 862.5 479.2L900 469L900 601L862.5 601C825 601 750 601 675 601C600 601 525 601 450 601C375 601 300 601 225 601C150 601 75 601 37.5 601L0 601Z" fill="url(#gradient1)"></path>
+<path d="M0 548L37.5 542.8C75 537.7 150 527.3 225 524.7C300 522 375 527 450 535.3C525 543.7 600 555.3 675 553.2C750 551 825 535 862.5 527L900 519L900 601L862.5 601C825 601 750 601 675 601C600 601 525 601 450 601C375 601 300 601 225 601C150 601 75 601 37.5 601L0 601Z" fill="#171717"></path>
+</svg>
