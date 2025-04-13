@@ -1,6 +1,6 @@
 # Next.js Pokedex
 
-This pokedex project is developed using next.js. The primary purpose of this project is for me to improve my next.js knowledge. Feel free to clone the repositiory and use it for your own learing.
+This pokedex project is developed using next.js. The primary purpose of this project is for me to improve my next.js knowledge. Feel free to clone the repositiory and use it for your own learning.
 
 ## Resources
 
