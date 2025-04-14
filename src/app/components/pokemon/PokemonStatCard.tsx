@@ -12,7 +12,7 @@ import { FlavorTextModal } from "./FlavorTextDialog";
 interface PokemonCardProps {
   slug: string;
 }
-//TODO fix language problem -> Amoonguss as example or Roggenrola
+
 export async function PokemonStatCard({ slug }: PokemonCardProps) {
   const { pokemon, status: pStatus } = await getPokemon(slug);
 
@@ -43,6 +43,18 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
     (entry) => entry.language.name === "en"
   );
 
+  const englishGenus = pokemonSpecies.genera.find(
+    (entry) => entry.language.name === "en"
+  )?.genus;
+
+  const jpPokemonName = pokemonSpecies.names.find(
+    (entry) => entry.language.name === "ja"
+  )?.name;
+
+  const roomajiPokemonName = pokemonSpecies.names.find(
+    (entry) => entry.language.name === "roomaji"
+  )?.name;
+
   return (
     <section className="flex w-full justify-center">
       <div className="bg-white dark:bg-neutral-800 w-[600px] h-auto rounded-3xl p-2 outline outline-2 outline-gray-900/10 shadow-xl shadow-indigo-700/10 dark:shadow-inherit">
@@ -51,7 +63,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
           className="flex flex-col w-full h-full rounded-3xl p-1 relative"
         >
           {/*ID*/}
-          <div className=" absolute top-0 left-0 flex justify-start gap-2 min-w-24 bg-white dark:bg-neutral-800 rounded-br-3xl py-4 px-5 rounded-tl-2xl">
+          <div className=" absolute top-0 left-0 flex justify-start gap-2 min-w-24 bg-white dark:bg-neutral-800 rounded-br-3xl py-4 px-5 rounded-tl-2xl z-10">
             <span className="font-bold text-2xl">{`#${pokemon.id
               .toString()
               .padStart(3, "0")}`}</span>
@@ -104,25 +116,22 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                   <span className="font-extrabold text-2xl">
                     {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}
                   </span>
-                  {pokemonSpecies?.genera[7]?.genus ? (
+                  {englishGenus ? (
                     <span className="font-medium text-lg leading-5">
-                      {pokemonSpecies?.genera[7]?.genus}
+                      {englishGenus}
                     </span>
                   ) : (
                     <span className="font-medium text-xl">none</span>
                   )}
                 </div>
                 <div className="flex flex-col items-center justify-center text-lg w-full sm:w-1/2 font-medium">
-                  {pokemonSpecies?.names[0].name ? (
-                    <span className="font-bold">
-                      {" "}
-                      {pokemonSpecies?.names[0].name}
-                    </span>
+                  {jpPokemonName ? (
+                    <span className="font-bold"> {jpPokemonName}</span>
                   ) : (
                     <span>no jp name</span>
                   )}
-                  {pokemonSpecies?.names[1].name ? (
-                    <span>{pokemonSpecies?.names[1].name}</span>
+                  {roomajiPokemonName ? (
+                    <span>{roomajiPokemonName}</span>
                   ) : (
                     <span>no romaji name</span>
                   )}
