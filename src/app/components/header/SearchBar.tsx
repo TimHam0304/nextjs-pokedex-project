@@ -36,7 +36,7 @@ export function SearchBar() {
     >
       <div className="relative">
         <select
-          className={`inline-flex h-full min-w-36 rounded-l-lg pe-8 ps-3 appearance-none items-center text-sm text-neutral-600 dark:text-neutral-300/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-700 border border-neutral-300 dark:border-neutral-700 ${
+          className={`inline-flex h-full min-w-36 rounded-l-lg pe-8 ps-3 appearance-none items-center text-sm text-neutral-600 dark:text-neutral-300/70 indigo-focus-outline border border-neutral-300 dark:border-neutral-700 ${
             scrolled ? style.onScroll : style.top
           }`}
           aria-label="search options"
@@ -57,7 +57,7 @@ export function SearchBar() {
         required
         id="search-field"
         aria-label="search"
-        className={`flex w-full -ml-px focus:z-10 rounded-r-lg px-3 py-2 text-sm placeholder:text-neutral-400 dark:placeholder:text-neutral-300/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-700 border border-neutral-300 dark:border-neutral-700 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none ${
+        className={`flex w-full -ml-px focus:z-10 rounded-r-lg px-3 py-2 text-sm placeholder:text-neutral-400 dark:placeholder:text-neutral-300/70 indigo-focus-outline border border-neutral-300 dark:border-neutral-700 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none ${
           scrolled ? style.onScroll : style.top
         }`}
         placeholder="Search..."

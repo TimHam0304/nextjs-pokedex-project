@@ -17,7 +17,7 @@ export function ShowMoreResultsButton({
       onClick={() => onClick()}
       className={`${
         disabled ? disabledStyle : baseStyle
-      } px-8 py-3 rounded-md font-medium outline outline-2 outline-gray-900/5 focus-visible:outline-indigo-700`}
+      } px-8 py-3 rounded-md font-medium indigo-focus-outline focus-visible:outline-offset-2`}
     >
       {disabled ? "All results displayed" : "Show more results"}
     </button>

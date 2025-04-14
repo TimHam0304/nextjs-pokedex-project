@@ -31,7 +31,7 @@ export default async function ListPage() {
             <Fragment key={pokemon}>
               {showDivider && <DividerWithCenterText text={firstLetter} />}
               <Link
-                className="text-center hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md py-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600"
+                className="text-center hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md py-1 indigo-focus-outline"
                 href={`/pokemon/${pokemon}`}
               >
                 {pokemon[0].toUpperCase() + pokemon}

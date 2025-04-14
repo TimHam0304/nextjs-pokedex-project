@@ -4,7 +4,7 @@ import { useDebounce } from "@/app/hooks/useDebounce";
 import { useEffect, useRef, useState } from "react";
 import { useCallback } from "react";
 
-//TODO fix know issue: navigating to the same route with the nav bar does not cause the state to reset even though search params are removed
+//TODO fix known issue: navigating to the same route with the nav bar does not cause the state to reset even though search params are removed
 export function SearchField() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -52,7 +52,7 @@ export function SearchField() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         type="search"
-        className="bg-white dark:bg-neutral-800 placeholder:text-neutral-400 dark:placeholder:text-neutral-300/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-700 rounded-lg p-2 shadow-md shadow-indigo-700/10 dark:shadow-inherit border border-neutral-300 dark:border-neutral-700 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none"
+        className="bg-white dark:bg-neutral-800 placeholder:text-neutral-400 dark:placeholder:text-neutral-300/70 indigo-focus-outline rounded-lg p-2 shadow-md shadow-indigo-700/10 dark:shadow-inherit border border-neutral-300 dark:border-neutral-700 [&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none"
         id="search"
         placeholder="Search..."
       />

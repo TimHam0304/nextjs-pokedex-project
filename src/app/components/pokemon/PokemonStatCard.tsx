@@ -75,7 +75,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
             <div className="flex flex-col items-center h-full w-full text-pretty gap-4">
               {/*Image Gallery Link*/}
               <Link
-                className="underline text-xs visited:text-blue-400"
+                className="underline text-xs visited:text-blue-400 indigo-focus-outline focus-visible:outline-offset-4"
                 href={`/pokemon/${pokemon.name}/images`}
               >
                 More Images

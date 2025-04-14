@@ -16,7 +16,7 @@ export function Header() {
             <ul className="hidden text-sm lg:flex items-center gap-2 ml-5 pl-5 border-l border-neutral-400">
               <li>
                 <Link
-                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 focus-visible:outline focus-visible:outline-2  focus-visible:outline-indigo-700"
+                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 indigo-focus-outline"
                   href="/pokedex"
                 >
                   Pokédex
@@ -24,7 +24,7 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 focus-visible:outline focus-visible:outline-2  focus-visible:outline-indigo-700"
+                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 indigo-focus-outline"
                   href="/paginatedPokedex"
                 >
                   paginated Pokedex
@@ -32,7 +32,7 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 focus-visible:outline focus-visible:outline-2  focus-visible:outline-indigo-700"
+                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 indigo-focus-outline"
                   href="/list"
                 >
                   List

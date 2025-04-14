@@ -7,7 +7,7 @@ export function BackButton() {
   return (
     <button
       onClick={router.back}
-      className="group py-3 px-8 inline-flex justify-center items-center hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md text-sm font-medium whitespace-nowrap ring-offset-neutral-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300/70 focus-visible:ring-offset-2"
+      className="group py-3 px-8 inline-flex justify-center items-center hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md text-sm font-medium whitespace-nowrap indigo-focus-outline transition-colors"
     >
       <ArrowLeft
         className="-ms-1 me-2 opacity-60 transition-transform group-hover:-translate-x-0.5"

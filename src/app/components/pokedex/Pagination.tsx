@@ -27,7 +27,7 @@ export function Pagination({ maxPages }: PaginationProps) {
       <button
         disabled={page === 1}
         aria-label="go to first page"
-        className="p-4 text-sm font-medium rounded-full disabled:hover:bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-700"
+        className="p-4 text-sm font-medium rounded-full disabled:hover:bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-700 indigo-focus-outline"
         onClick={() => {
           const params = new URLSearchParams(searchParams);
           params.set("page", String(1));
@@ -39,7 +39,7 @@ export function Pagination({ maxPages }: PaginationProps) {
       <button
         disabled={page === 1}
         aria-label="go to previous page"
-        className="p-4 text-sm font-medium rounded-full disabled:hover:bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-700"
+        className="p-4 text-sm font-medium rounded-full disabled:hover:bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-700 indigo-focus-outline"
         onClick={() => {
           const params = new URLSearchParams(searchParams);
           const prev = page > 1 ? page - 1 : page;
@@ -55,7 +55,7 @@ export function Pagination({ maxPages }: PaginationProps) {
       <button
         disabled={page === maxPages}
         aria-label="go to next page"
-        className="p-4 text-sm font-medium rounded-full disabled:hover:bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-700"
+        className="p-4 text-sm font-medium rounded-full disabled:hover:bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-700 indigo-focus-outline"
         onClick={() => {
           const params = new URLSearchParams(searchParams);
           const next = page < maxPages ? page + 1 : page;
@@ -68,7 +68,7 @@ export function Pagination({ maxPages }: PaginationProps) {
       <button
         disabled={page === maxPages}
         aria-label="go to last page"
-        className="p-4 text-sm font-medium rounded-full disabled:hover:bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-700"
+        className="p-4 text-sm font-medium rounded-full disabled:hover:bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-700 indigo-focus-outline"
         onClick={() => {
           const params = new URLSearchParams(searchParams);
           params.set("page", String(maxPages));

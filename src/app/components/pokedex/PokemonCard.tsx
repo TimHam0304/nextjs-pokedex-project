@@ -10,7 +10,7 @@ export function PokemonCard({ Pokemon }: { Pokemon: Pokemon }) {
   return (
     <Link
       href={`/pokemon/${Pokemon.name}`}
-      className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit hover:shadow-none outline outline-2 outline-gray-900/5 focus-visible:outline-indigo-600 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-all"
+      className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit hover:shadow-none gray-outline-indigo-focus-outline hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-all"
     >
       <Image
         src={
@@ -21,7 +21,7 @@ export function PokemonCard({ Pokemon }: { Pokemon: Pokemon }) {
         width={200}
         height={200}
         className="object-contain mx-auto"
-        alt={`Image of ${Pokemon.id}`}
+        alt={`Image of ${Pokemon.name}`}
       />
       <div className="flex flex-col items-center pt-2 gap-2">
         <span className="font-bold text-xl">

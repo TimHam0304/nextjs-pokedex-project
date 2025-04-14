@@ -18,7 +18,7 @@ export function HomeCardLinkPicure({
   return (
     <Link
       {...props}
-      className={`bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-xl shadow-indigo-700/10 dark:shadow-inherit hover:shadow-none max-w-[28rem] outline outline-2 outline-gray-900/5 focus-visible:outline-indigo-700 hover:bg-neutral-100  dark:hover:bg-neutral-700 transition-all`}
+      className={`bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-xl shadow-indigo-700/10 dark:shadow-inherit hover:shadow-none max-w-[28rem]hover:bg-neutral-100  dark:hover:bg-neutral-700 transition-all gray-outline-indigo-focus-outline`}
     >
       <div className="flex flex-col justify-center overflow-hidden w-full h-full">
         {imgSrc && (

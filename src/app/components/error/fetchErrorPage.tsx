@@ -31,7 +31,7 @@ export function FetchError({ status }: FetchErrorPageProps) {
       </p>
       <p>Please try again later</p>
       <button
-        className="py-3 px-8 inline-flex justify-center items-center bg-neutral-800 hover:bg-neutral-700 rounded-md text-sm font-medium whitespace-nowrap ring-offset-neutral-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300/70 focus-visible:ring-offset-2"
+        className="py-3 px-8 inline-flex justify-center items-center bg-neutral-800 hover:bg-neutral-700 rounded-md text-sm font-medium whitespace-nowrap indigo-focus-outline"
         onClick={refresh}
       >
         Try again
