@@ -64,7 +64,7 @@ export const PokemonCardSkeleton = forwardRef<HTMLAnchorElement, SkeletonProps>(
       <a
         ref={ref}
         {...props}
-        className={`${className} flex flex-col items-center p-5 border-2 rounded-2xl border-neutral-800 shadow-sm`}
+        className={`${className} flex flex-col items-center p-5 border-2 rounded-2xl border-neutral-200 dark:border-neutral-800 shadow-sm`}
       >
         <SVGSkeleton className="object-contain w-[200px] h-[200px]" />
         <div className="flex flex-col items-center pt-2 gap-2">
