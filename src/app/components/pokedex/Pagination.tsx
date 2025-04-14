@@ -34,7 +34,7 @@ export function Pagination({ maxPages }: PaginationProps) {
           push(`${pathname}?${params.toString()}`, { scroll: false });
         }}
       >
-        <ChevronDoubleLeft />
+        <ChevronDoubleLeft aria-hidden />
       </button>
       <button
         disabled={page === 1}
@@ -47,7 +47,7 @@ export function Pagination({ maxPages }: PaginationProps) {
           push(`${pathname}?${params.toString()}`, { scroll: false });
         }}
       >
-        <ChevronLeft />
+        <ChevronLeft aria-hidden />
       </button>
       <span>
         {page} / {maxPages}
@@ -63,7 +63,7 @@ export function Pagination({ maxPages }: PaginationProps) {
           push(`${pathname}?${params.toString()}`, { scroll: false });
         }}
       >
-        <ChevronRight />
+        <ChevronRight aria-hidden />
       </button>
       <button
         disabled={page === maxPages}
@@ -75,7 +75,7 @@ export function Pagination({ maxPages }: PaginationProps) {
           push(`${pathname}?${params.toString()}`, { scroll: false });
         }}
       >
-        <ChevronDoubleRight />
+        <ChevronDoubleRight aria-hidden />
       </button>
     </div>
   );
