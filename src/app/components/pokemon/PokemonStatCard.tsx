@@ -157,7 +157,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                 >
                   Abilities
                 </h2>
-                <div className="flex gap-2 w-full justify-around">
+                <div className="flex gap-2 w-full justify-evenly">
                   {pokemon.abilities.map((pAbil: PokemonAbility, i: number) => {
                     return (
                       <div
@@ -168,12 +168,10 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                           {pAbil.ability.name[0].toUpperCase() +
                             pAbil.ability.name.slice(1)}
                         </span>
-                        {pAbil.is_hidden ? (
+                        {pAbil.is_hidden && (
                           <span className="text-xs font-sans text-center">
                             Hidden Ability
                           </span>
-                        ) : (
-                          <span></span>
                         )}
                       </div>
                     );
@@ -274,10 +272,11 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                 </h2>
                 {pokemonSpecies?.evolves_from_species ? (
                   <Link
-                    className="text-blue-500"
+                    className="visited:text-blue-500 underline"
                     href={`/pokemon/${pokemonSpecies.evolves_from_species.name}`}
                   >
-                    {pokemonSpecies.evolves_from_species.name}
+                    {pokemonSpecies.evolves_from_species.name[0].toUpperCase() +
+                      pokemonSpecies.evolves_from_species.name.slice(1)}
                   </Link>
                 ) : (
                   <span>none</span>
@@ -316,7 +315,9 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                   First Appearance
                 </h2>
                 <span className="">
-                  {pokemonSpecies.generation?.name || <span>none</span>}
+                  {pokemonSpecies.generation?.name.toUpperCase() || (
+                    <span>none</span>
+                  )}
                 </span>
               </div>
               {/*Leveling rate*/}
