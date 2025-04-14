@@ -33,7 +33,7 @@ export async function ImageDisplay({ slug }: { slug: string }) {
   return (
     <section className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 w-full h-auto">
       {pokemon.sprites.other?.["official-artwork"].front_default && (
-        <div className="flex justify-center bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit hover:shadow-none outline outline-2 outline-gray-900/5">
+        <div className="flex justify-center bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit outline outline-2 outline-gray-900/5">
           <Image
             src={pokemon.sprites.other?.["official-artwork"].front_default}
             width={300}
@@ -43,7 +43,7 @@ export async function ImageDisplay({ slug }: { slug: string }) {
         </div>
       )}
       {pokemon.sprites.other?.["official-artwork"].front_shiny && (
-        <div className="flex justify-center bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit hover:shadow-none outline outline-2 outline-gray-900/5">
+        <div className="flex justify-center bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit outline outline-2 outline-gray-900/5">
           <Image
             src={pokemon.sprites.other?.["official-artwork"].front_shiny}
             width={300}
@@ -53,7 +53,7 @@ export async function ImageDisplay({ slug }: { slug: string }) {
         </div>
       )}
       {pokemon.sprites.front_default && (
-        <div className="flex justify-center bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit hover:shadow-none outline outline-2 outline-gray-900/5">
+        <div className="flex justify-center bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit outline outline-2 outline-gray-900/5">
           <Image
             src={pokemon.sprites.front_default}
             width={300}
@@ -63,7 +63,7 @@ export async function ImageDisplay({ slug }: { slug: string }) {
         </div>
       )}
       {pokemon.sprites.front_shiny && (
-        <div className="flex justify-center bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit hover:shadow-none outline outline-2 outline-gray-900/5">
+        <div className="flex justify-center bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit outline outline-2 outline-gray-900/5">
           <Image
             src={pokemon.sprites.front_shiny}
             width={300}
