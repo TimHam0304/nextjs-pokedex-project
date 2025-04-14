@@ -16,7 +16,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4 py-10 px-6 justify-center items-center  mx-auto max-w-7xl h-auto w-full">
+        <div className="flex flex-wrap gap-4 py-10 px-6 justify-center items-center mx-auto max-w-7xl h-auto w-full">
           <HomeCardLinkPicure
             href="/pokedex"
             title="Pokedex"
