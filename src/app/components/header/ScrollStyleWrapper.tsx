@@ -29,9 +29,9 @@ export function ScrollStyleWrapper({ children }: ScrollStyleWrapperProps) {
 
   const style = {
     base: "flex w-full h-full px-6 transition-all duration-300",
-    top: "bg-white/60 dark:bg-neutral-900/60",
+    top: "bg-white/80 dark:bg-neutral-900/60",
     onScroll:
-      "bg-white/90 dark:bg-neutral-900/90 shadow-sm shadow-neutral-600 backdrop-blur-sm backdrop-saturate-150",
+      "bg-white/95 dark:bg-neutral-900/90 shadow-sm shadow-neutral-600 backdrop-blur-sm backdrop-saturate-150",
   };
 
   return (
