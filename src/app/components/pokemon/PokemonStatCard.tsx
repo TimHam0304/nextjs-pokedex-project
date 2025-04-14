@@ -84,7 +84,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
           </div>
           {/*inner content block*/}
           <div className="bg-white dark:bg-neutral-800 w-full rounded-3xl pt-28 p-6">
-            <div className="flex flex-col items-center h-full w-full text-pretty gap-4">
+            <div className="flex flex-col items-center h-full w-full text-pretty gap-6">
               {/*Image Gallery Link*/}
               <Link
                 className="underline text-xs visited:text-blue-400 indigo-focus-outline focus-visible:outline-offset-4"
@@ -204,7 +204,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                 </div>
               </div>
               {/*Egg Group / Gender Container*/}
-              <div className="flex flex-col sm:flex-row items-center justify-around w-full gap-4 sm:gap-0">
+              <div className="flex flex-col gap-2 sm:flex-row w-full">
                 <div className="flex flex-col gap-2 items-center sm:w-1/2">
                   <h2
                     style={{ color: FirstTypeColor }}
@@ -282,17 +282,30 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                   <span>none</span>
                 )}
               </div>
-              {/*Capture rate*/}
-              <div className="flex flex-col gap-2 items-center w-full">
-                <h2
-                  style={{ color: FirstTypeColor }}
-                  className="text-lg font-bold dark:brightness-150"
-                >
-                  Caputure rate
-                </h2>
-                <span className="">
-                  {pokemonSpecies?.capture_rate || <span>none</span>}
-                </span>
+              {/*Capture rate / Leveling rate Container*/}
+              <div className="flex gap-2 justify-around w-full">
+                <div className="flex flex-col gap-2 items-center sm:w-1/2">
+                  <h2
+                    style={{ color: FirstTypeColor }}
+                    className="text-lg font-bold dark:brightness-150 text-center leading-tight"
+                  >
+                    Caputure rate
+                  </h2>
+                  <span className="">
+                    {pokemonSpecies?.capture_rate || <span>none</span>}
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2 items-center sm:w-1/2">
+                  <h2
+                    style={{ color: FirstTypeColor }}
+                    className="text-lg font-bold dark:brightness-150 text-center leading-tight"
+                  >
+                    Leveling rate
+                  </h2>
+                  <span className="">
+                    {pokemonSpecies.growth_rate?.name || <span>none</span>}
+                  </span>
+                </div>
               </div>
               {/*Shape*/}
               <div className="flex flex-col gap-2 items-center w-full">
@@ -318,18 +331,6 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                   {pokemonSpecies.generation?.name.toUpperCase() || (
                     <span>none</span>
                   )}
-                </span>
-              </div>
-              {/*Leveling rate*/}
-              <div className="flex flex-col gap-2 items-center w-full">
-                <h2
-                  style={{ color: FirstTypeColor }}
-                  className="text-lg font-bold dark:brightness-150"
-                >
-                  Leveling rate
-                </h2>
-                <span className="">
-                  {pokemonSpecies.growth_rate?.name || <span>none</span>}
                 </span>
               </div>
               {/*Habitat*/}
