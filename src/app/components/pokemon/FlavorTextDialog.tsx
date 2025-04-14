@@ -60,7 +60,7 @@ export function FlavorTextModal({
         <div className="flex justify-end sticky top-0">
           <button
             onClick={() => dialogRef.current?.close()}
-            className="bg-neutral-600 rounded-full p-2 mr-2 mt-2"
+            className="bg-neutral-200 dark:bg-neutral-600 rounded-full p-2 mr-2 mt-2"
           >
             <X strokeWidth={3} />
           </button>
