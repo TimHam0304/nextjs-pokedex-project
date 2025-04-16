@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { ScrollStyleWrapper } from "@components/header/ScrollStyleWrapper";
-import { SearchBar } from "@components/header/SearchBar";
-export function Header() {
+import { SearchModal } from "./SearchModal";
+import { getPokemonList } from "@/app/actions/PokemonActions";
+
+export async function Header() {
+  const { pokemonList } = await getPokemonList();
+
   return (
     <header className="fixed top-0 h-16 w-full z-50">
       <ScrollStyleWrapper>
@@ -40,7 +44,7 @@ export function Header() {
               </li>
             </ul>
           </div>
-          <SearchBar />
+          <SearchModal pokemonList={pokemonList} />
         </nav>
       </ScrollStyleWrapper>
     </header>
