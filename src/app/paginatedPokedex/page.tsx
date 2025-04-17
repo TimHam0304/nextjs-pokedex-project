@@ -29,7 +29,7 @@ export default async function PaginatedPokedex({
 
   return (
     <main className="flex flex-col gap-6 py-20 px-6 mx-auto max-w-7xl h-auto w-full items-center">
-      <h1 className="font-bold text-3xl text-indigo-700 dark:text-inherit">
+      <h1 className="font-bold text-3xl text-center text-indigo-700 dark:text-inherit">
         Paginated Pokédex
       </h1>
       <SearchField />

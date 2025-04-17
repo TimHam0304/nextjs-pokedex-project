@@ -23,7 +23,7 @@ export function Pagination({ maxPages }: PaginationProps) {
       : 1;
 
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-2 sm:gap-4 items-center">
       <button
         disabled={page === 1}
         aria-label="go to first page"
@@ -49,8 +49,8 @@ export function Pagination({ maxPages }: PaginationProps) {
       >
         <ChevronLeft aria-hidden />
       </button>
-      <span>
-        {page} / {maxPages}
+      <span className="flex text-center gap-0 sm:gap-1 flex-col sm:flex-row">
+        <span>{page}</span> / <span>{maxPages}</span>
       </span>
       <button
         disabled={page === maxPages}
