@@ -71,7 +71,7 @@ export async function getPokemonList(): Promise<GetPokemonListResponse> {
     pokemonList: pokemonList,
     status: { code: response.status, message: response.statusText },
   };
-} //TODO move out of actions
+}
 
 interface GetPokemonSpeciesResponse {
   pokemonSpecies: PokemonSpecies | null;
