@@ -22,7 +22,6 @@ export function Pokedex({
   const [page, setPage] = useState(2);
   const disabled = pokemon.length >= matches.length;
 
-  //TODO maybe remove this callback as it does not make a difference -> page is changed every click
   const loadMorePokemon = useCallback(() => {
     if (!disabled) {
       console.log("not disabled");
