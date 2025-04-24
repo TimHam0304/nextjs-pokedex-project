@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ScrollStyleWrapper } from "@components/header/ScrollStyleWrapper";
 import { SearchModal } from "./SearchModal";
 import { getPokemonList } from "@/app/actions/PokemonActions";
+import { MobileMenu } from "@components/Sidebar/SideBar";
 
 export async function Header() {
   const { pokemonList } = await getPokemonList();
@@ -10,9 +11,9 @@ export async function Header() {
     <header className="fixed top-0 h-16 w-full z-50">
       <ScrollStyleWrapper>
         <nav className="flex justify-end items-center max-w-7xl w-full mx-auto">
-          <div className="flex flex-1 h-9 justify-center sm:justify-start">
+          <div className="flex flex-1 h-9 justify-start">
             <Link
-              className="flex items-center font-bold antialiased text-2xl leading-7"
+              className="flex items-center font-bold antialiased text-2xl leading-7 text-nowrap rounded-md indigo-focus-outline"
               href="/"
             >
               Next.js Pokédex
@@ -44,7 +45,10 @@ export async function Header() {
               </li>
             </ul>
           </div>
-          <SearchModal pokemonList={pokemonList} />
+          <div className="flex w-full justify-end items-center max-w-[380px] gap-0 sm:gap-2">
+            <SearchModal pokemonList={pokemonList} />
+            <MobileMenu />
+          </div>
         </nav>
       </ScrollStyleWrapper>
     </header>

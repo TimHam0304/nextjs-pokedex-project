@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import { Fragment } from "react";
 import { ArrowInBoxTopRight } from "@icons/arrowInBox";
 import { useRouter } from "next/navigation";
+import { MagnifyingGlassIcon } from "@/app/icons/MagnifyingGlass";
 
 const searchPaths = [
   {
@@ -55,7 +56,7 @@ export function SearchModal({ pokemonList }: SearchModalProps) {
     if (!dialogRef.current) return;
 
     if (e.target === dialogRef.current) {
-      dialogRef.current?.close();
+      closeModal();
     }
   };
 
@@ -117,16 +118,18 @@ export function SearchModal({ pokemonList }: SearchModalProps) {
       </dialog>
       <button
         onClick={openModal}
-        className="hidden sm:flex items-center justify-between h-9 max-w-[380px] p-2 w-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-400 text-sm rounded-md indigo-focus-outline"
+        aria-label="click to open search modal"
+        className="hidden sm:flex items-center justify-between h-9 p-2 w-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-400 text-sm rounded-md indigo-focus-outline"
       >
         Search site...
-        <ArrowInBoxTopRight
-          aria-hidden
-          strokeWidth={2}
-          width={16}
-          height={16}
-        />
-        <span className="sr-only">click to open modal</span>
+        <ArrowInBoxTopRight aria-hidden strokeWidth={2} className="size-4" />
+      </button>
+      <button
+        onClick={openModal}
+        aria-label="click to open search modal"
+        className="sm:hidden flex items-center justify-center p-3 rounded-full indigo-focus-outline"
+      >
+        <MagnifyingGlassIcon aria-hidden strokeWidth={3} className="size-4" />
       </button>
     </Fragment>
   );
