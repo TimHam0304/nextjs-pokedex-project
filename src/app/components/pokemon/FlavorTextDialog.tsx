@@ -93,7 +93,7 @@ export function FlavorTextModal({
           onClick={openModal}
           className=" hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md p-2 indigo-focus-outline"
         >
-          <ArrowInBoxTopRight strokeWidth={2} width={16} height={16} />
+          <ArrowInBoxTopRight strokeWidth={2} className="size-4" />
 
           <span className="sr-only">click to open modal</span>
         </button>
