@@ -20,12 +20,12 @@ export function SearchField() {
   const handleSearch = useCallback(
     (query: string) => {
       const params = new URLSearchParams(searchParams);
+      //if page param exists and the search changes reset page to 1
+      if (query !== lastquery.current && page) {
+        params.delete("page");
+        params.append("page", "1");
+      }
       if (query) {
-        //rest page to one
-        if (query !== lastquery.current && page) {
-          params.delete("page");
-          params.append("page", "1");
-        }
         params.delete("search");
         params.append("search", query);
       } else {

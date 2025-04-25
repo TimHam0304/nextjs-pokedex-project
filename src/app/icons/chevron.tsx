@@ -6,7 +6,6 @@ export function ChevronDown(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="size-6"
       {...props}
     >
       <path
@@ -26,7 +25,6 @@ export function ChevronLeft(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="size-6"
       {...props}
     >
       <path
@@ -46,7 +44,6 @@ export function ChevronRight(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="size-6"
       {...props}
     >
       <path
@@ -66,7 +63,6 @@ export function ChevronDoubleRight(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="size-6"
       {...props}
     >
       <path
@@ -86,7 +82,6 @@ export function ChevronDoubleLeft(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="size-6"
       {...props}
     >
       <path
