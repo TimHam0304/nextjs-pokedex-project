@@ -24,7 +24,6 @@ export function Pokedex({
 
   const loadMorePokemon = useCallback(() => {
     if (!disabled) {
-      console.log("not disabled");
       getPokemons(page, matches).then((res) => {
         setPokemon((prev) => [...prev, ...res]);
         setPage((prev) => prev + 1);
