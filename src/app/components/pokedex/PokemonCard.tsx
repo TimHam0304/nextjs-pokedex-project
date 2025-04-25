@@ -37,7 +37,7 @@ export function PokemonCard({ Pokemon }: { Pokemon: Pokemon }) {
             return (
               <span
                 key={pType.type.name}
-                className={`py-1 px-2 rounded-xl`}
+                className={`py-1 px-2 rounded-xl font-extrabold text-white`}
                 style={{ backgroundColor: color }}
               >
                 {pType.type.name[0].toUpperCase() + pType.type.name.slice(1)}
