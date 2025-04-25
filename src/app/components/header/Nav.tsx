@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ScrollStyleWrapper } from "@components/header/ScrollStyleWrapper";
 import { SearchModal } from "./SearchModal";
 import { getPokemonList } from "@/app/actions/PokemonActions";
-import { MobileMenu } from "@components/Sidebar/SideBar";
+import { MobileMenu } from "@components/mobileMenu/MobileMenu";
 
 export async function Header() {
   const { pokemonList } = await getPokemonList();
