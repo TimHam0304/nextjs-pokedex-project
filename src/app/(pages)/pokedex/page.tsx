@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   title: "Pokedex",
 };
 
-//instead of using searchParams and turning this into a dynamic route useSearchParams could also be used
 export default async function PokedexPage({
   searchParams,
 }: {
