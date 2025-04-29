@@ -34,7 +34,7 @@ export default async function ListPage() {
                 className="text-center hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md py-1 indigo-focus-outline"
                 href={`/pokemon/${pokemon}`}
               >
-                {pokemon[0].toUpperCase() + pokemon}
+                {pokemon[0].toUpperCase() + pokemon.slice(1)}
               </Link>
             </Fragment>
           );
