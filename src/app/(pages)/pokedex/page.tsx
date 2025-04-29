@@ -6,7 +6,7 @@ import { getSearchMatches } from "@components/pokedex/util";
 import { getPokemons } from "@actions/PokemonActions";
 import { FetchError } from "@components/error/fetchErrorPage";
 import { Suspense } from "react";
-import { PokedexComponentSkelleton } from "@components/misc/PokedexLoadingSkelleton";
+import { PokedexComponentSkeleton } from "@components/misc/PokedexLoadingSkeleton";
 
 export const metadata: Metadata = {
   title: "Pokedex",
@@ -38,7 +38,7 @@ export default async function PokedexPage({
       </h1>
       <SearchField />
 
-      <Suspense fallback={<PokedexComponentSkelleton />}>
+      <Suspense fallback={<PokedexComponentSkeleton />}>
         <Pokedex
           key={key}
           initialPokemon={pokemonPromise}

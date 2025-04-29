@@ -1,14 +1,14 @@
 import { InView } from "react-intersection-observer";
-import { PokemonCardSkeleton } from "@components/pokedex/PokemonCard";
-import { Skeleton } from "./Skeleton";
+import { PokemonCardSkeleton } from "@components/misc/PokemonCardSkeleton";
+import { Skeleton } from "@components/misc/Skeleton";
 
-interface PokedexLoadingSkelletonProps {
+interface PokedexLoadingSkeletonProps {
   onInView: Function;
 }
 
-export function PokedexLoadingSkelleton({
+export function PokedexLoadingSkeleton({
   onInView,
-}: PokedexLoadingSkelletonProps) {
+}: PokedexLoadingSkeletonProps) {
   return (
     <section className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 w-full h-auto">
       <InView
@@ -26,7 +26,7 @@ export function PokedexLoadingSkelleton({
   );
 }
 
-export function PokedexComponentSkelleton() {
+export function PokedexComponentSkeleton() {
   return (
     <div className="flex flex-col items-center h-auto w-full gap-6">
       <span className="flex items-center h-14 gap-1">

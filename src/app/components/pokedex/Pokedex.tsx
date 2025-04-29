@@ -3,7 +3,7 @@ import { Pokemon } from "@models/Pokemon/pokemon";
 import { getPokemons } from "@actions/PokemonActions";
 import { useState, useCallback, use } from "react";
 import { PokemonGridWithDivider } from "@components/pokedex/PokemonGrid";
-import { PokedexLoadingSkelleton } from "@components/misc/PokedexLoadingSkelleton";
+import { PokedexLoadingSkeleton } from "@/app/components/misc/PokedexLoadingSkeleton";
 import { ShowMoreResultsButton } from "@components/pokedex/MoreSearchResultsButton";
 /**
  * returns either the normal infinite scroll PokemonList or the SearchList depending on if the query field is empty or not
@@ -49,7 +49,7 @@ export function Pokedex({
       ) : (
         <>
           {pokemon.length < matches.length ? (
-            <PokedexLoadingSkelleton onInView={loadMorePokemon} />
+            <PokedexLoadingSkeleton onInView={loadMorePokemon} />
           ) : (
             <div>No more entries to load</div>
           )}
