@@ -20,12 +20,11 @@ Exception to this are the icons in the footer as well as images used on the fron
 
 ### Folder structure
 
-This project uses the next.js app router. Therefore route structure and route names are based on the folder structure and folder names
+This project uses the next.js app router. Therefore route structure and route names are based on the folder structure and folder names.
 
-Folders for routing are: list, paginatedPokedex, pokedex, pokemon
+folders:
 
-other folders:
-
+- (pages): Route Group folder for all pages (list, paginatedPokedex, pokedex, pokemon) expect for the home page
 - actions: all data fetching functions
 - assets: svg assets
 - components: react components sorted by the place they are used in
