@@ -16,9 +16,6 @@ export async function generateMetadata(
   };
 }
 
-//TODO this can probably be improved
-//currently non existent slugs still cause a dynamic render on the server for each new slug
-//I could use a middleware here to check the sslug against a whitelist
 export default async function Pokemon(props: PokemonPageProps) {
   const params = await props.params;
   return (

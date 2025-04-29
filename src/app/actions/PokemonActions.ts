@@ -47,7 +47,6 @@ interface GetPokemonListResponse {
   status: status;
 }
 
-//TODO serialise data using stringy to json
 /**
  * server action
  *

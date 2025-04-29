@@ -22,7 +22,6 @@ export default async function ImageGallery(props: ImageGalleryProps) {
   );
 }
 
-//TODO move to different file and wrap ImageDisplay in suspense
 export async function ImageDisplay({ slug }: { slug: string }) {
   const { pokemon } = await getPokemon(slug);
 
