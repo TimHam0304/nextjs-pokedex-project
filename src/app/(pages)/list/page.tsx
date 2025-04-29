@@ -1,6 +1,6 @@
 import { getPokemonList } from "@actions/PokemonActions";
 import { Fragment } from "react";
-import { DividerWithCenterText } from "../components/misc/Divider";
+import { DividerWithCenterText } from "@components/misc/Divider";
 import Link from "next/link";
 
 export default async function ListPage() {
