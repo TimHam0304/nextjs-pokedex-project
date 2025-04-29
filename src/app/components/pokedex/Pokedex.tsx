@@ -1,9 +1,9 @@
 "use client";
 import { Pokemon } from "@models/Pokemon/pokemon";
 import { getPokemons } from "@actions/PokemonActions";
-import { useState, useCallback } from "react";
+import { useState, useCallback, use } from "react";
 import { PokemonGridWithDivider } from "@components/pokedex/PokemonGrid";
-import { PokedexLoadingSkelleton } from "@components/pokedex/PokedexLoadingSkelleton";
+import { PokedexLoadingSkelleton } from "@components/misc/PokedexLoadingSkelleton";
 import { ShowMoreResultsButton } from "@components/pokedex/MoreSearchResultsButton";
 /**
  * returns either the normal infinite scroll PokemonList or the SearchList depending on if the query field is empty or not
@@ -13,11 +13,12 @@ export function Pokedex({
   matches,
   search,
 }: {
-  initialPokemon: Pokemon[];
+  initialPokemon: Promise<Pokemon[]>;
   matches: string[];
   search: string | undefined;
 }) {
-  const [pokemon, setPokemon] = useState<Pokemon[]>(initialPokemon);
+  const initialP = use(initialPokemon);
+  const [pokemon, setPokemon] = useState<Pokemon[]>(initialP);
   //starting from page 2 because page 1 is delivered with initial render (initialPokemon)
   const [page, setPage] = useState(2);
   const disabled = pokemon.length >= matches.length;
@@ -33,8 +34,12 @@ export function Pokedex({
 
   return (
     <div className="flex flex-col items-center h-auto w-full gap-6">
-      <div aria-live="polite" aria-atomic>
-        Displaying <span className="font-bold">{pokemon.length}</span> out of{" "}
+      <div
+        className="flex items-center h-14 gap-1"
+        aria-live="polite"
+        aria-atomic
+      >
+        Displaying <span className="font-bold">{pokemon.length}</span> out of
         <span className="font-bold">{matches.length} </span>
         results
       </div>

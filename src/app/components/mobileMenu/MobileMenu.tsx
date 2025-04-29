@@ -4,7 +4,6 @@ import Link from "next/link";
 import { X } from "@icons/x";
 import { BurgerMenuIcon } from "@icons/BurgerMenu";
 
-//TODO fix: menu stays open when user navigates with searchbar
 //TODO fix: if focus is lost user can tab outside menu while its open
 export function MobileMenu() {
   const [open, setOpen] = useState<boolean>(false);

@@ -5,6 +5,8 @@ import { Pokedex } from "@components/pokedex/Pokedex";
 import { getSearchMatches } from "@components/pokedex/util";
 import { getPokemons } from "@actions/PokemonActions";
 import { FetchError } from "../components/error/fetchErrorPage";
+import { Suspense } from "react";
+import { PokedexWithTitleComponentSkelleton } from "../components/misc/PokedexLoadingSkelleton";
 
 export const metadata: Metadata = {
   title: "Pokedex",
@@ -26,22 +28,24 @@ export default async function PokedexPage({
 
   const matches = getSearchMatches({ search, pokemonList });
 
-  const pokemon = await getPokemons(1, matches);
+  const pokemonPromise = getPokemons(1, matches);
   //if the initial data changes the key changes as well causing all state to reset. This means no useEffect is needed to hanle the state reset
-  const key = pokemon.map((pokemon) => pokemon.id).join("-");
+  const key = matches.slice(0, 15).join("-");
   return (
     <main className="flex flex-col gap-6 py-20 px-6 mx-auto max-w-7xl h-auto w-full items-center">
       <h1 className="font-bold text-3xl text-indigo-700 dark:text-inherit">
         Pokédex
       </h1>
       <SearchField />
-      <h2>{search ? "search mode" : "infinite scroll mode"}</h2>
-      <Pokedex
-        key={key}
-        initialPokemon={pokemon}
-        matches={matches}
-        search={search}
-      />
+
+      <Suspense fallback={<PokedexWithTitleComponentSkelleton />}>
+        <Pokedex
+          key={key}
+          initialPokemon={pokemonPromise}
+          matches={matches}
+          search={search}
+        />
+      </Suspense>
     </main>
   );
 }

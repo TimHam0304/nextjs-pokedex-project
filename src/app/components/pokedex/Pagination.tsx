@@ -35,7 +35,7 @@ export function Pagination({ maxPages }: PaginationProps) {
   const lastPage = createPaginationLink(maxPages);
 
   return (
-    <div className="flex gap-2 sm:gap-4 items-center">
+    <div className="flex gap-2 sm:gap-4 items-center h-14">
       {page !== 1 ? (
         <Link
           aria-label="go to first page"
