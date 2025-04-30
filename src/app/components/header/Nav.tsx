@@ -18,10 +18,10 @@ export async function Header() {
             >
               Next.js Pokédex
             </Link>
-            <ul className="hidden text-sm lg:flex items-center gap-2 ml-5 pl-5 border-l border-neutral-400">
+            <ul className="hidden text-sm font-bold lg:flex items-center gap-2 ml-5 pl-5 border-l border-neutral-400">
               <li>
                 <Link
-                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 indigo-focus-outline"
+                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-600/90 hover:text-white rounded-md p-3 indigo-focus-outline"
                   href="/pokedex"
                 >
                   Pokédex
@@ -29,7 +29,7 @@ export async function Header() {
               </li>
               <li>
                 <Link
-                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 indigo-focus-outline"
+                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-600/90 hover:text-white rounded-md p-3 indigo-focus-outline"
                   href="/paginatedPokedex"
                 >
                   paginated Pokedex
@@ -37,7 +37,7 @@ export async function Header() {
               </li>
               <li>
                 <Link
-                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 indigo-focus-outline"
+                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-600/90 hover:text-white rounded-md p-3 indigo-focus-outline"
                   href="/list"
                 >
                   List
