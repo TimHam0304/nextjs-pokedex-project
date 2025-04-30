@@ -37,6 +37,13 @@ export function SearchField() {
   );
 
   useEffect(() => {
+    const currentSearch = searchParams.get("search") || "";
+    if (currentSearch !== query) {
+      setQuery(currentSearch);
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
     if (debouncedQuery !== lastquery.current) {
       handleSearch(debouncedQuery);
       lastquery.current = debouncedQuery;
