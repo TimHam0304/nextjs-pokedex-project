@@ -25,8 +25,9 @@ export default async function PokedexPage({
     return <FetchError status={status} />;
   }
 
+  // names of the pokemons matching the query / full list if there is no query
   const matches = getSearchMatches({ search, pokemonList });
-
+  //fetches first batch (page) based on query matches
   const pokemonPromise = getPokemons(1, matches);
   //if the initial data changes the key changes as well causing all state to reset. This means no useEffect is needed to handle the state reset
   const key = matches.slice(0, 15).join("-");
