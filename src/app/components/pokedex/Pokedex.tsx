@@ -8,6 +8,9 @@ import { ShowMoreResultsButton } from "@components/pokedex/MoreSearchResultsButt
 /**
  * Grid view with infinite scroll view
  * shows a "more results" button if user searches
+ * @param initialPokemon the first page of pokemon based on the query
+ * @param matches the matches for the current query
+ * @param search the current query
  */
 export function Pokedex({
   initialPokemon,
