@@ -6,7 +6,8 @@ import { PokemonGridWithDivider } from "@components/pokedex/PokemonGrid";
 import { PokedexLoadingSkeleton } from "@/app/components/misc/PokedexLoadingSkeleton";
 import { ShowMoreResultsButton } from "@components/pokedex/MoreSearchResultsButton";
 /**
- * returns either the normal infinite scroll PokemonList or the SearchList depending on if the query field is empty or not
+ * Grid view with infinite scroll view
+ * shows a "more results" button if user searches
  */
 export function Pokedex({
   initialPokemon,
