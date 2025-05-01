@@ -11,7 +11,7 @@ interface status {
 
 /**
  * @param page the page to fetch
- * @param pokemonList a list of pokemon
+ * @param pokemonList a list of pokemon names
  * @returns an array of detailed pokemon data. If all fetches fail, an empty array is returned
  *
  * this function does not return an error for failed fetches. Instead just successful ones are returned
