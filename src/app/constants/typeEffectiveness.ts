@@ -1,7 +1,11 @@
+import { PokemonTypeNames } from "@models/Pokemon/pokemonTypeNames";
 /**
  * type Effectiveness of the elements against each other
  */
-export const typeEffectiveness = {
+export const typeEffectiveness: Record<
+  PokemonTypeNames,
+  Record<PokemonTypeNames, number>
+> = {
   normal: {
     normal: 1,
     fire: 1,

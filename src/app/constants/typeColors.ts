@@ -1,4 +1,5 @@
-export const TYPECOLORS = {
+import { PokemonTypeNames } from "@models/Pokemon/pokemonTypeNames";
+export const TYPECOLORS: Record<PokemonTypeNames, string> = {
   normal: "#A8A77A",
   fire: "#EE8130",
   water: "#6390F0",
@@ -18,4 +19,5 @@ export const TYPECOLORS = {
   steel: "#B7B7CE",
   fairy: "#D685AD",
   stellar: "#40B5A5",
+  unknown: "#333",
 } as const;

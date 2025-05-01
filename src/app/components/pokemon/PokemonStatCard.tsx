@@ -7,7 +7,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { NamedAPIResource } from "@models/basic/resource";
 import { FetchError } from "../error/fetchErrorPage";
-import { FlavorTextModal } from "./FlavorTextDialog";
+import { FlavorTextModal } from "@components/pokemon/FlavorTextDialog";
+import { TypeEffectivenessContainer } from "@components/pokemon/TypeEffectivnessDisplay";
 
 interface PokemonCardProps {
   slug: string;
@@ -307,6 +308,8 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                   </span>
                 </div>
               </div>
+              {/*Type effectiveness*/}
+              <TypeEffectivenessContainer types={pokemon.types} />
               {/*Shape*/}
               <div className="flex flex-col gap-2 items-center w-full">
                 <h2
