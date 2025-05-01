@@ -28,7 +28,7 @@ export default async function PokedexPage({
   const matches = getSearchMatches({ search, pokemonList });
 
   const pokemonPromise = getPokemons(1, matches);
-  //if the initial data changes the key changes as well causing all state to reset. This means no useEffect is needed to hanle the state reset
+  //if the initial data changes the key changes as well causing all state to reset. This means no useEffect is needed to handle the state reset
   const key = matches.slice(0, 15).join("-");
   return (
     <main className="flex flex-col gap-6 py-20 px-6 mx-auto max-w-7xl h-auto w-full items-center">
