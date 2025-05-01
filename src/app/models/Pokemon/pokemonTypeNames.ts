@@ -1,4 +1,4 @@
-export type PokemonType =
+export type PokemonTypeNames =
   | "normal"
   | "fire"
   | "water"
@@ -16,4 +16,6 @@ export type PokemonType =
   | "dragon"
   | "dark"
   | "steel"
-  | "fairy";
+  | "fairy"
+  | "stellar"
+  | "unknown";

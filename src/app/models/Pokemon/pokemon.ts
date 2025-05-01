@@ -1,4 +1,5 @@
 import { NamedAPIResource } from "../basic/resource";
+import { PokemonTypeNames } from "./pokemonTypeNames";
 
 export interface Pokemon {
   id: number;
@@ -141,7 +142,7 @@ export interface PokemonType {
 
 export interface Type {
   /** The name of the type*/
-  name: string;
+  name: PokemonTypeNames;
   /**The URL of the referenced resource. */
   url: string;
 }
