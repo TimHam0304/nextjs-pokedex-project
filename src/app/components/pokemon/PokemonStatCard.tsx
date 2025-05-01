@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 import { NamedAPIResource } from "@models/basic/resource";
 import { FetchError } from "../error/fetchErrorPage";
 import { FlavorTextModal } from "@components/pokemon/FlavorTextDialog";
-import { TypeEffectivenessContainer } from "@components/pokemon/TypeEffectivnessDisplay";
+import { TypeEffectivenessContainer } from "@components/pokemon/TypeEffectivenessContainer";
 
 interface PokemonCardProps {
   slug: string;

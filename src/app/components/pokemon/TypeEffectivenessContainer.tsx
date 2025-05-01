@@ -2,7 +2,7 @@ import { PokemonType } from "@/app/models/Pokemon/pokemon";
 import { TYPECOLORS } from "@constants";
 import { getTypeDamageMultipliers } from "./util";
 
-interface TypeEffectivenessDisplayProps {
+interface TypeEffectivenessContainerProps {
   types: PokemonType[];
 }
 
@@ -11,7 +11,7 @@ interface TypeEffectivenessDisplayProps {
  */
 export function TypeEffectivenessContainer({
   types,
-}: TypeEffectivenessDisplayProps) {
+}: TypeEffectivenessContainerProps) {
   const FirstTypeColor =
     TYPECOLORS[types[0].type.name as keyof typeof TYPECOLORS] || "#333";
   const typeDamageMultipliers = getTypeDamageMultipliers(
