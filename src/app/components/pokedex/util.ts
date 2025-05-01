@@ -3,6 +3,12 @@ interface getSearchMatchesProps {
   pokemonList: string[];
 }
 
+/**
+ *
+ * @param search query term
+ * @param pokemonList list of names to get matches from
+ * @returns a list of pokemon names matching the search query. returns full list if there is no query
+ */
 export function getSearchMatches({
   search,
   pokemonList,
