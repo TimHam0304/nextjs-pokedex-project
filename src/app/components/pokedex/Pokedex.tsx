@@ -6,8 +6,8 @@ import { PokemonGridWithDivider } from "@components/pokedex/PokemonGrid";
 import { PokedexLoadingSkeleton } from "@/app/components/misc/PokedexLoadingSkeleton";
 import { ShowMoreResultsButton } from "@components/pokedex/MoreSearchResultsButton";
 /**
- * Grid view with infinite scroll view
- * shows a "more results" button if user searches
+ * Displays the pokemons in a grid view based on the query.
+ * If there is a query infinite scroll is replaced with a "more results" button
  * @param initialPokemon the first page of pokemon based on the query
  * @param matches the matches for the current query
  * @param search the current query
