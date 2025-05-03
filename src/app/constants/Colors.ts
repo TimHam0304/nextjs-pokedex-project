@@ -21,3 +21,12 @@ export const TYPECOLORS: Record<PokemonTypeNames, string> = {
   stellar: "#40B5A5",
   unknown: "#333",
 } as const;
+
+export const STATCOLORS = {
+  hp: "##9EE865",
+  attack: "#F5DE69",
+  defense: "#F09A65",
+  "special-attack": "#66D8F6",
+  "special-defense": "#899EEA",
+  speed: "#E46CCA",
+} as const;
