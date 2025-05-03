@@ -23,7 +23,7 @@ export const TYPECOLORS: Record<PokemonTypeNames, string> = {
 } as const;
 
 export const STATCOLORS = {
-  hp: "##9EE865",
+  hp: "#9EE865",
   attack: "#F5DE69",
   defense: "#F09A65",
   "special-attack": "#66D8F6",
