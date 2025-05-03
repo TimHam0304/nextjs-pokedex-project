@@ -201,7 +201,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                       STAT_ABBREVIATIONS[entry.stat.name] || entry.stat.name;
                     return (
                       <span
-                        className="flex flex-col items-center py-1 px-2 rounded-xl font-extrabold text-white brightness-90"
+                        className="flex flex-col min-w-20 items-center py-1 px-2 rounded-xl font-extrabold text-white brightness-90"
                         style={{ backgroundColor: color }}
                         key={entry.stat.name}
                       >
