@@ -34,7 +34,7 @@ export interface Pokemon {
   /** The species this Pokémon belongs to */
   species: NamedAPIResource;
   /** A list of base stat values for this Pokémon */
-  stats: any[];
+  stats: PokemonStat[];
   /** A list of details showing types this Pokémon has */
   types: PokemonType[];
   /** Data describing a Pokemon's types in a previous generation. */
@@ -145,4 +145,13 @@ export interface Type {
   name: PokemonTypeNames;
   /**The URL of the referenced resource. */
   url: string;
+}
+
+export interface PokemonStat {
+  /**	The stat the Pokémon has. */
+  stat: NamedAPIResource;
+  /**	/**	The stat the Pokémon has. */
+  effort: number;
+  /**	The base value of the stat. */
+  base_stat: number;
 }
