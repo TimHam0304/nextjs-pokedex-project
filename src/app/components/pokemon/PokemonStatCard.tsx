@@ -1,8 +1,12 @@
 import { getPokemon, getPokemonSpecies } from "@actions/PokemonActions";
 import Image from "next/image";
 import fallBackImage from "@public/fallback.jpg";
-import { TYPECOLORS } from "@constants";
-import { PokemonAbility, PokemonType } from "@models/Pokemon/pokemon";
+import { STATCOLORS, TYPECOLORS, STAT_ABBREVIATIONS } from "@constants";
+import {
+  PokemonAbility,
+  PokemonStat,
+  PokemonType,
+} from "@models/Pokemon/pokemon";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { NamedAPIResource } from "@models/basic/resource";
@@ -56,6 +60,8 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
     (entry) => entry.language.name === "roomaji"
   )?.name;
 
+  // dont add this here like lang: just make a switch witch "attack" = color xy And so on
+  // typing and colors has been added
   return (
     <section className="flex w-full justify-center">
       <div className="bg-white dark:bg-neutral-800 w-[600px] h-auto rounded-3xl p-2 outline outline-2 outline-gray-900/10 shadow-xl shadow-indigo-700/10 dark:shadow-inherit">
@@ -175,6 +181,33 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                           </span>
                         )}
                       </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 items-center w-full">
+                <h2
+                  style={{ color: FirstTypeColor }}
+                  className="text-lg font-bold dark:brightness-150"
+                >
+                  Base stats
+                </h2>
+                <div className="flex gap-2 flex-wrap justify-center mb-2">
+                  {pokemon.stats.map((entry: PokemonStat) => {
+                    const color =
+                      STATCOLORS[entry.stat.name as keyof typeof STATCOLORS] ||
+                      "#333";
+                    const statAbbr =
+                      STAT_ABBREVIATIONS[entry.stat.name] || entry.stat.name;
+                    return (
+                      <span
+                        className="flex flex-col items-center py-1 px-2 rounded-xl font-extrabold text-white brightness-90"
+                        style={{ backgroundColor: color }}
+                        key={entry.stat.name}
+                      >
+                        <span>{entry.base_stat}</span>
+                        <span>{statAbbr}</span>
+                      </span>
                     );
                   })}
                 </div>
