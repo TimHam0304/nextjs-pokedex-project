@@ -446,4 +446,4 @@ export const typeEffectiveness: Record<
     stellar: 1,
     unknown: 1,
   },
-};
+} as const;
