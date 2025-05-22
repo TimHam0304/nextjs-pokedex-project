@@ -47,7 +47,7 @@ export interface PokemonAbility {
   /** The slot this ability occupies in this Pokémon species */
   slot: number;
   /** The ability the Pokémon may have */
-  ability: any;
+  ability: NamedAPIResource;
 }
 
 export interface PokemonSprites {
