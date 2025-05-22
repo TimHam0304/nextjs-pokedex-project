@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 /*
-background-color-rgb is bg-neutral-100 from tailwind
+foreground: black
+background: bg-neutral-100
 */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-color-rgb: 255, 255, 255;
 }
-/*bg color hex: #171717 (900 neutral)*/
+/*
+foreground: white
+background: bg-neutral-900
+*/
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
