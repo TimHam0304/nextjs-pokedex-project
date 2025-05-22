@@ -1,7 +1,6 @@
 "use server";
 import { BASE_URL, ENDPOINTS, POKEDEXPAGESIZE } from "@constants";
 import { Pokemon } from "@models/Pokemon/pokemon";
-import { NamedAPIResourceList } from "@models/basic/resource";
 import { PokemonSpecies } from "@models/PokemonSpecies/species";
 
 interface status {
