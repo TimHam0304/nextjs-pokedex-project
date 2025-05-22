@@ -15,8 +15,9 @@ Exception to this are the icons in the footer as well as images used on the fron
 1. "/" : home route
 2. "/pokedex" : An infinite scroll view with search function
 3. "/paginatedPokedex" : Same view but paginated. Also with search function
-4. "pokemon/${name}" : A card view containing the most important info of a pokemon
-5. "pokemon/${name}/images" : A small gallery of selected images for the pokemon
+4. "/pokemon/${name}" : A card view containing the most important info of a pokemon
+5. "/pokemon/${name}/images" : A small gallery of selected images for the pokemon
+6. "/ability/${name}" : Info view about an ability with a list of pokemons using the ability
 
 ### Folder structure
 
