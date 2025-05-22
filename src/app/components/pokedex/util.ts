@@ -1,25 +1,19 @@
-interface getSearchMatchesProps {
-  search: string | undefined;
-  pokemonList: string[];
-}
-
 /**
+ * Returns a list of Pokémon names matching the search query.
+ * Returns the full list if no query is provided.
  *
- * @param search query term
- * @param pokemonList list of names to get matches from
- * @returns a list of pokemon names matching the search query. returns full list if there is no query
+ * @param search - search string
+ * @param pokemonList - Array of Pokémon names to search within
+ * @returns Filtered list based on the query
  */
-export function getSearchMatches({
-  search,
-  pokemonList,
-}: getSearchMatchesProps) {
+export function getSearchMatches(
+  search: string | undefined,
+  pokemonList: string[]
+): string[] {
   if (search) {
-    // get all pokemon names matching the query
-    const filteredPokemon = pokemonList.filter((item) =>
+    return pokemonList.filter((item) =>
       item.toLowerCase().includes(search.toLowerCase())
     );
-    return filteredPokemon;
-  } else {
-    return pokemonList;
   }
+  return pokemonList;
 }

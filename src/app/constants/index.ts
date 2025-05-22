@@ -4,3 +4,4 @@ export * from "./pokedex";
 export * from "./Colors";
 export * from "./typeEffectiveness";
 export * from "./StatAbbreviations";
+export * from "./pokemonList";

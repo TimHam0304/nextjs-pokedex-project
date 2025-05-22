@@ -1,18 +1,10 @@
-import { getPokemonList } from "@actions/PokemonActions";
 import { Fragment } from "react";
 import { DividerWithCenterText } from "@components/misc/Divider";
+import { pokemonList } from "@/app/constants";
 import Link from "next/link";
 
 export default async function ListPage() {
-  const { pokemonList, status } = await getPokemonList();
-
-  if (!pokemonList) {
-    throw new Error(
-      `Failed to fetch pokemon list for ListPage, API RESPONSE: ${status}`
-    );
-  }
-
-  const sortedList = pokemonList.sort();
+  const sortedList = pokemonList.slice().sort();
   let lastLetter = "";
   return (
     <main className="flex flex-col gap-6 py-20 px-6 mx-auto max-w-7xl h-auto w-full items-center">

@@ -42,36 +42,6 @@ export async function getPokemons(
   return pokemons;
 }
 
-interface GetPokemonListResponse {
-  pokemonList: string[] | null;
-  status: status;
-}
-
-/**
- * server action
- *
- * @returns an array containing all pokemon names
- */
-export async function getPokemonList(): Promise<GetPokemonListResponse> {
-  const response = await fetch(
-    `${BASE_URL.REST}${ENDPOINTS.POKEMON}?offset=0&limit=5000`,
-    { cache: "force-cache" }
-  );
-  if (!response.ok) {
-    return {
-      pokemonList: null,
-      status: { code: response.status, message: response.statusText },
-    };
-  }
-
-  const jsonData = (await response.json()) as NamedAPIResourceList;
-  const pokemonList = jsonData.results.map((obj) => obj.name);
-  return {
-    pokemonList: pokemonList,
-    status: { code: response.status, message: response.statusText },
-  };
-}
-
 interface GetPokemonSpeciesResponse {
   pokemonSpecies: PokemonSpecies | null;
   status: status;

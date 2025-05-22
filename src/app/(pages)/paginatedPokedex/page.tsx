@@ -1,8 +1,7 @@
-import { getPokemonList, getPokemons } from "@actions/PokemonActions";
-import { FetchError } from "@components/error/fetchErrorPage";
+import { getPokemons } from "@actions/PokemonActions";
 import { PokemonGrid } from "@components/pokedex/PokemonGrid";
 import { Pagination } from "@components/pokedex/Pagination";
-import { POKEDEXPAGESIZE } from "@constants";
+import { POKEDEXPAGESIZE, pokemonList } from "@constants";
 import { getSearchMatches } from "@components/pokedex/util";
 import { SearchField } from "@components/pokedex/Searchfield";
 
@@ -11,14 +10,10 @@ export default async function PaginatedPokedex({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const { pokemonList, status } = await getPokemonList();
   const params = await searchParams;
   const search = typeof params.search === "string" ? params.search : undefined;
-  if (!pokemonList) {
-    return <FetchError status={status} />;
-  }
 
-  const matches = getSearchMatches({ search, pokemonList });
+  const matches = getSearchMatches(search, pokemonList.slice());
   const maxPages = Math.ceil(matches.length / POKEDEXPAGESIZE);
   const page =
     Number.isInteger(Number(params.page)) && Number(params.page) > 0

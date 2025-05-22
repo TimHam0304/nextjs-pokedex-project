@@ -1,10 +1,9 @@
-import { getPokemonList } from "@actions/PokemonActions";
 import { Metadata } from "next";
 import { SearchField } from "@components/pokedex/Searchfield";
 import { Pokedex } from "@components/pokedex/Pokedex";
 import { getSearchMatches } from "@components/pokedex/util";
 import { getPokemons } from "@actions/PokemonActions";
-import { FetchError } from "@components/error/fetchErrorPage";
+import { pokemonList } from "@constants";
 import { Suspense } from "react";
 import { PokedexComponentSkeleton } from "@components/misc/PokedexLoadingSkeleton";
 
@@ -17,16 +16,11 @@ export default async function PokedexPage({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const { pokemonList, status } = await getPokemonList();
   const params = await searchParams;
   const search = typeof params.search === "string" ? params.search : undefined;
 
-  if (!pokemonList) {
-    return <FetchError status={status} />;
-  }
-
   // names of the pokemons matching the query / full list if there is no query
-  const matches = getSearchMatches({ search, pokemonList });
+  const matches = getSearchMatches(search, pokemonList.slice());
   //fetches first batch (page) based on query matches
   const pokemonPromise = getPokemons(1, matches);
   //if the initial data changes the key changes as well causing all state to reset. This means no useEffect is needed to handle the state reset

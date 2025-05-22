@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { ScrollStyleWrapper } from "@components/header/ScrollStyleWrapper";
 import { SearchModal } from "./SearchModal";
-import { getPokemonList } from "@/app/actions/PokemonActions";
 import { MobileMenu } from "@components/mobileMenu/MobileMenu";
 
 export async function Header() {
-  const { pokemonList } = await getPokemonList();
-
   return (
     <header className="fixed top-0 h-16 w-full z-50">
       <ScrollStyleWrapper>
@@ -46,7 +43,7 @@ export async function Header() {
             </ul>
           </div>
           <div className="flex w-full justify-end items-center max-w-[380px] gap-0 sm:gap-2">
-            <SearchModal pokemonList={pokemonList} />
+            <SearchModal />
             <MobileMenu />
           </div>
         </nav>

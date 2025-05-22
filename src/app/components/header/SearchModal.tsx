@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { ArrowInBoxTopRight } from "@icons/arrowInBox";
 import { useRouter } from "next/navigation";
 import { MagnifyingGlassIcon } from "@/app/icons/MagnifyingGlass";
+import { pokemonList } from "@constants";
 import Link from "next/link";
 
 const searchPaths = [
@@ -18,12 +19,8 @@ const searchPaths = [
   },
 ];
 
-interface SearchModalProps {
-  pokemonList: string[] | null;
-}
-
 //TODO make search suggestions accessible with keyboard up/down instead of tab
-export function SearchModal({ pokemonList }: SearchModalProps) {
+export function SearchModal() {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const [activeRoute, setActiveRoute] = useState<string | null>(
     searchPaths[0].route
