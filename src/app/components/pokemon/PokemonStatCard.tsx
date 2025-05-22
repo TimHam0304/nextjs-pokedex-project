@@ -167,11 +167,12 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                 <div className="flex gap-2 w-full justify-evenly">
                   {pokemon.abilities.map((pAbil: PokemonAbility, i: number) => {
                     return (
-                      <div
+                      <Link
                         key={i}
-                        className={`flex flex-col justify-center py-1 px-2 rounded-xl bg-neutral-100 dark:bg-neutral-700`}
+                        href={`/ability/${pAbil.ability.name}`}
+                        className={`flex flex-col justify-center py-1 px-2 rounded-xl bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-700 dark:hover:bg-neutral-600`}
                       >
-                        <span className="text-center">
+                        <span className="text-center indigo-focus-outline">
                           {pAbil.ability.name[0].toUpperCase() +
                             pAbil.ability.name.slice(1)}
                         </span>
@@ -180,7 +181,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                             Hidden Ability
                           </span>
                         )}
-                      </div>
+                      </Link>
                     );
                   })}
                 </div>
