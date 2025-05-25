@@ -60,8 +60,6 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
     (entry) => entry.language.name === "roomaji"
   )?.name;
 
-  // dont add this here like lang: just make a switch witch "attack" = color xy And so on
-  // typing and colors has been added
   return (
     <section className="flex w-full justify-center">
       <div className="bg-white dark:bg-neutral-800 w-[600px] h-auto rounded-3xl p-2 outline outline-2 outline-gray-900/10 shadow-xl shadow-indigo-700/10 dark:shadow-inherit">
