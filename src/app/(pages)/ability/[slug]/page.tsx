@@ -40,17 +40,19 @@ export default async function AbilityPage(props: AbilityPageProps) {
       <h1 className="font-bold text-3xl text-center text-indigo-700 dark:text-inherit">
         {ability.name[0].toUpperCase() + ability.name.slice(1)}
       </h1>
-      <section className="flex flex-col text-center gap-2">
-        <h2 className="text-xl font-bold">Effect</h2>
-        {englishEffect && (
-          <p className="text-sm text-center">{englishEffect.effect}</p>
-        )}
-      </section>
-      <section className="flex flex-col text-center gap-2">
-        <h2 className="text-xl font-bold">Short Effect</h2>
-        {englishEffect && (
-          <p className="text-sm text-center">{englishEffect.short_effect}</p>
-        )}
+      <section className="flex flex-col sm:flex-row text-center gap-2">
+        <div className="sm:min-w-3/4 bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit gray-outline-indigo-focus-outline transition-all">
+          <h2 className="text-xl font-bold">Effect</h2>
+          {englishEffect && (
+            <p className="text-sm text-center">{englishEffect.effect}</p>
+          )}
+        </div>
+        <div className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit gray-outline-indigo-focus-outline transition-all">
+          <h2 className="text-xl font-bold">Short Effect</h2>
+          {englishEffect && (
+            <p className="text-sm text-center">{englishEffect.short_effect}</p>
+          )}
+        </div>
       </section>
       <section className="flex flex-col text-center gap-2">
         <h2 className="text-xl font-bold">First Appearance</h2>
@@ -59,12 +61,12 @@ export default async function AbilityPage(props: AbilityPageProps) {
           {ability.generation.name.toUpperCase()}
         </p>
       </section>
-      <section className="flex flex-col w-full text-center gap-2">
-        <h2 className="text-xl font-bold">
+      <section className="flex flex-col w-full gap-2">
+        <h2 className="text-xl font-bold text-center">
           List of pokemons with this ability
         </h2>
         <p className="text-sm text-center">
-          A * next to the name means the ability is hidden
+          * the ability is hidden for this pokemon
         </p>
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 w-full">
           {ability.pokemon.map((entry: AbilityPokemon) => (
