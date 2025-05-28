@@ -37,20 +37,18 @@ export default async function AbilityPage(props: AbilityPageProps) {
 
   return (
     <main className="flex flex-col gap-6 py-20 px-6 mx-auto max-w-7xl h-auto w-full items-center">
-      <h1 className="font-bold text-3xl text-center text-indigo-700 dark:text-inherit">
+      <h1 className="font-bold text-3xl text-center text-indigo-700 dark:text-indigo-300">
         {ability.name[0].toUpperCase() + ability.name.slice(1)}
       </h1>
-      <section className="flex flex-col sm:flex-row text-center gap-2">
-        <div className="sm:min-w-3/4 bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit gray-outline-indigo-focus-outline transition-all">
+      <section className="flex flex-col w-full justify-center sm:flex-row text-center gap-2">
+        <div className=" bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit gray-outline-indigo-focus-outline transition-all">
           <h2 className="text-xl font-bold">Effect</h2>
-          {englishEffect && (
-            <p className="text-sm text-center">{englishEffect.effect}</p>
-          )}
+          {englishEffect && <p className="text-sm">{englishEffect.effect}</p>}
         </div>
-        <div className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit gray-outline-indigo-focus-outline transition-all">
+        <div className="min-w-[30%] bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit gray-outline-indigo-focus-outline transition-all">
           <h2 className="text-xl font-bold">Short Effect</h2>
           {englishEffect && (
-            <p className="text-sm text-center">{englishEffect.short_effect}</p>
+            <p className="text-sm">{englishEffect.short_effect}</p>
           )}
         </div>
       </section>
