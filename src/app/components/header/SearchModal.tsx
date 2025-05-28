@@ -135,7 +135,7 @@ export function SearchModal() {
                 <Link
                   href={`${activeRoute}?search=${entry}`}
                   onClick={closeModal}
-                  className="flex items-center pl-2 min-h-10 hover:bg-neutral-700 rounded-md focus-visible:bg-neutral-700 outline-none"
+                  className="flex items-center pl-2 min-h-10 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-md focus-visible:bg-neutral-700 outline-none"
                   key={entry}
                 >
                   {entry[0].toUpperCase() + entry.slice(1)}
