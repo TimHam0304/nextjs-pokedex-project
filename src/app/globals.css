@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 /*
-foreground: black
+foreground: bg-neutral-800
 background: bg-neutral-100
 */
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 38, 38, 38;
   --background-color-rgb: 255, 255, 255;
 }
 /*
