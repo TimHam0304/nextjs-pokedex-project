@@ -32,10 +32,10 @@ export function WavesSVG({ className, ...props }: WaveSVGProps) {
     >
       <defs>
         <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#171717" />
+          <stop offset="0%" stopColor={isDarkMode ? "#171717" : "#fff"} />
           <stop offset="25%" stopColor="#4f46e5" />
           <stop offset="75%" stopColor="#3730a3" />
-          <stop offset="100%" stopColor="#171717" />
+          <stop offset="100%" stopColor={isDarkMode ? "#171717" : "#fff"} />
         </linearGradient>
       </defs>
 
