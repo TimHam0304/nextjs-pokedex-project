@@ -5,7 +5,7 @@ import { HomeImageSlider } from "./HomeImageSlider";
 export function HeroSection() {
   return (
     <section
-      className="relative w-full min-h-[500px] h-[50vw]"
+      className="relative w-full min-h-[500px] h-[50vw] mt-16"
       aria-label="Image Carousel"
     >
       <HomeImageSlider />
