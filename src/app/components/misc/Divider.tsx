@@ -1,3 +1,4 @@
+/**for usage in grids */
 export function Divider() {
   return (
     <div
@@ -11,6 +12,7 @@ interface DividerWithCenterTextProps {
   text: number | string;
 }
 
+/**for usage in grids */
 export function DividerWithCenterText({ text }: DividerWithCenterTextProps) {
   return (
     <div
