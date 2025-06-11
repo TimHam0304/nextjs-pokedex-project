@@ -18,7 +18,6 @@ export async function generateMetadata(
   };
 }
 
-//TODO improve design of page
 export default async function AbilityPage(props: AbilityPageProps) {
   const params = await props.params;
   const { ability, status } = await getAbility(params.slug);
@@ -36,36 +35,38 @@ export default async function AbilityPage(props: AbilityPageProps) {
   );
 
   return (
-    <main className="flex flex-col gap-6 py-20 px-6 mx-auto max-w-7xl h-auto w-full items-center">
+    <main className="flex flex-col py-20 px-6 mx-auto max-w-7xl h-auto w-full gap-6">
       <h1 className="font-bold text-3xl text-center text-indigo-700 dark:text-indigo-300">
         {ability.name[0].toUpperCase() + ability.name.slice(1)}
       </h1>
-      <section className="flex flex-col w-full justify-center sm:flex-row text-center gap-2">
-        <div className=" bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit gray-outline-indigo-focus-outline transition-all">
-          <h2 className="text-xl font-bold">Effect</h2>
+      <section className="flex flex-col w-full gap-6">
+        <div className="">
+          <h2 className="text-xl font-bold w-full border-b-2 pb-1 border-indigo-500 mb-4">
+            Effect
+          </h2>
           {englishEffect && <p className="text-sm">{englishEffect.effect}</p>}
         </div>
-        <div className="min-w-[30%] bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg shadow-indigo-700/10 dark:shadow-inherit gray-outline-indigo-focus-outline transition-all">
-          <h2 className="text-xl font-bold">Short Effect</h2>
+        <div className="">
+          <h2 className="text-xl font-bold w-full border-b-2 pb-1 border-indigo-500 mb-4">
+            Short Effect
+          </h2>
           {englishEffect && (
             <p className="text-sm">{englishEffect.short_effect}</p>
           )}
         </div>
       </section>
-      <section className="flex flex-col text-center gap-2">
-        <h2 className="text-xl font-bold">First Appearance</h2>
+      <section className="flex flex-col w-full">
+        <h2 className="text-xl font-bold w-full border-b-2 pb-1 border-indigo-500 mb-4">
+          First Appearance
+        </h2>
 
-        <p className="text-sm text-center">
-          {ability.generation.name.toUpperCase()}
-        </p>
+        <p className="text-sm">{ability.generation.name.toUpperCase()}</p>
       </section>
       <section className="flex flex-col w-full gap-2">
-        <h2 className="text-xl font-bold text-center">
+        <h2 className="text-xl font-bold w-full border-b-2 pb-1 border-indigo-500 mb-4">
           List of pokemons with this ability
         </h2>
-        <p className="text-sm text-center">
-          * the ability is hidden for this pokemon
-        </p>
+
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 w-full">
           {ability.pokemon.map((entry: AbilityPokemon) => (
             <Link
@@ -79,6 +80,7 @@ export default async function AbilityPage(props: AbilityPageProps) {
             </Link>
           ))}
         </div>
+        <p className="text-sm">* the ability is hidden for this pokemon</p>
       </section>
     </main>
   );
