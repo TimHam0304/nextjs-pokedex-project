@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { getPokemon } from "@actions/PokemonActions";
-import { BackButton } from "@components/misc/BackButton";
 
 interface ImageGalleryProps {
   params: Promise<{ slug: string }>;
@@ -9,14 +8,10 @@ interface ImageGalleryProps {
 export default async function ImageGallery(props: ImageGalleryProps) {
   const params = await props.params;
   return (
-    <main className="flex flex-col items-center gap-8 py-20 px-6 mx-auto max-w-7xl h-auto w-full">
-      <div className="flex w-full">
-        <BackButton />
-      </div>
-
-      <div className="text-2xl font-bold">
+    <main className="flex flex-col gap-8 py-20 px-6 mx-auto max-w-7xl h-auto w-full">
+      <h1 className="text-2xl font-bold text-center text-indigo-700 dark:text-indigo-300">
         {params.slug[0].toUpperCase() + params.slug.slice(1)} Images
-      </div>
+      </h1>
       <ImageDisplay slug={params.slug} />
     </main>
   );
