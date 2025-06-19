@@ -5,6 +5,7 @@ import { HeartSolid, HeartOutlined } from "@icons/heart";
 import { LinkIcon } from "@icons/link";
 import { BASE_URL } from "@constants";
 
+//TODO add this to the detailed card
 export function LikeAndShareBox({ name }: { name: string }) {
   const { toggleFavorite, isFavorite } = useFavoritesStore((state) => state);
   const isFav = isFavorite(name);
