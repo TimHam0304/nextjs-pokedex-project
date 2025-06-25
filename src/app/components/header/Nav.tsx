@@ -40,6 +40,14 @@ export async function Header() {
                   List
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-600/90 hover:text-white rounded-md p-3 indigo-focus-outline"
+                  href="/favorites"
+                >
+                  Fav
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="flex w-full justify-end items-center max-w-[380px] gap-0 sm:gap-2">
