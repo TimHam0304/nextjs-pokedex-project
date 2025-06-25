@@ -20,7 +20,9 @@ All icons are from [heroicons.com](https://heroicons.com/)
 4. "/pokemon/${name}" : A card view containing the most important info of a pokemon
 5. "/pokemon/${name}/images" : A small gallery of selected images for the pokemon
 6. "/ability/${name}" : Info view about an ability with a list of pokemons using the ability
-7. "/favorites" : Displays the items the user added to his favorites by pressing the heart icons (since this project has no user accounts its implemented using zustand)
+7. "/favorites" : Displays the items the user added to his favorites by pressing the heart icons (since this project has no user accounts its implemented using zustand)\*
+
+\* at the current moment favorites are not persisted across manual page refreshes
 
 ### Folder structure
 
