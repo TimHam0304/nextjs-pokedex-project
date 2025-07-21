@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ScrollStyleWrapper } from "@components/header/ScrollStyleWrapper";
 import { SearchModal } from "./SearchModal";
 import { MobileMenu } from "@components/mobileMenu/MobileMenu";
+import { HeartOutlined } from "@icons/heart";
 
 export async function Header() {
   return (
@@ -42,10 +43,10 @@ export async function Header() {
               </li>
               <li>
                 <Link
-                  className="dark:hover:bg-neutral-500/50 hover:bg-indigo-600/90 hover:text-white rounded-md p-3 indigo-focus-outline"
+                  className="dark:hover:bg-neutral-500/50 block hover:bg-indigo-600/90 hover:text-white rounded-full p-2 indigo-focus-outline"
                   href="/favorites"
                 >
-                  Fav
+                  <HeartOutlined className="size-5" />
                 </Link>
               </li>
             </ul>

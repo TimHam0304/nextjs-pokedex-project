@@ -78,6 +78,14 @@ export function MobileMenu() {
           >
             List
           </Link>
+          <Link
+            ref={lastLinkRef}
+            onClick={() => setOpen(false)}
+            className="dark:hover:bg-neutral-500/50 hover:bg-indigo-400/30 rounded-md p-3 indigo-focus-outline"
+            href="/favorites"
+          >
+            Favorites
+          </Link>
         </nav>
       </div>
     </div>
