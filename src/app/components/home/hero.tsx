@@ -9,7 +9,7 @@ export function HeroSection() {
       aria-label="Image Carousel"
     >
       <HomeImageSlider />
-      <WavesSVG className="absolute bottom-0 w-full min-h-[500px] -z-10 h-auto object-cover object-bottom" />
+      <WavesSVG className="absolute bottom-0 w-full min-h-[500px] -z-10" />
       <div className="w-full h-full flex flex-col justify-center items-center gap-10">
         <h1 className="font-extrabold text-white antialiased text-responsiveHero text-center mx-6 leading-none">
           Next.js Pokédex
