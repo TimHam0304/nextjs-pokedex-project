@@ -39,9 +39,11 @@ folders:
 - icons: react icon components. Svg Icons from: [heroicons.com](https://heroicons.com/)
 - models: this folder contains type information for the used API routes. Naming is based on the official documentation: [pokeapi.co docs](https://pokeapi.co/docs/v2)
 
-### Light & Dark theme
+### Light & Dark theme / Responsiveness
 
 I created both a ligh and a dark theme which are applied based on the browsers settings. A manual toggel is currently not implemented.
+
+All pages are fully responsive across various screen sizes, and all components scale appropriately to ensure accessibility (even when zoomed in or out).
 
 ## Contributions
 
@@ -70,3 +72,81 @@ npm run build
 ```bash
 npm run start
 ```
+
+## Screenshots
+
+The following segment is has an asortment of screenshots showcasing the page.
+
+Images marked as full-page screenshots were captured using the built-in Firefox screenshot tool to display the entire page for this showcase.
+
+### Home
+
+![Home](./docs/Home.png)
+
+### Pokedex
+
+#### Infinite Scroll Version (normal zoom)
+
+![normalZoom](./docs/normalZoom.png)
+
+#### Infinite Scroll Version (full-page screenshot)
+
+![FullScreenInfinite](./docs/FullScreenInfinite.png)
+
+#### Paginated Version (full-page screenshot)
+
+![FullScreenPaginated](./docs/FullScreenPaginated.png)
+
+### Detailed Pokemon stat page (normal zoom)
+
+![PokemonCardExampleNormal](./docs/PokemonCardExampleNormal.png)
+
+### Detailed Pokemon stat page (full-page screenshot)
+
+![PokemonCardExample](./docs/PokemonCardExample.png)
+
+### Ability Page
+
+A detailed description of an Ability and all the Pokemon that can have it. Can be reached via the detailed stat page by clicking on an ability
+
+![AbilityPage](./docs/AbilityPage.png)
+
+### Search Example
+
+A search performed on the paginated version of the pokedex
+
+![SearchExample](./docs/SearchExample.png)
+
+### Search Modal
+
+The search modal is accessible via the header on every page.
+
+![SearchModal](./docs/SearchModal.png)
+
+### Favorites Page
+
+![favoritesPage](./docs/favoritesPage.png)
+
+### Mobile (small screens)
+
+On mobile the search modal is accessible via the search icon. Other menu points are in the burger menu
+
+#### Home Mobile
+
+![HomeMobile](./docs/HomeMobile.png)
+
+#### Pokedex Mobile
+
+![PokedexMobile](./docs/PokedexMobile.png)
+
+#### Pokemon Card Mobile
+
+![PokemonCardMobileExample](./docs/PokemonCardMobileExample.png)
+
+### Light mode
+
+A few examples showcasing the light mode
+
+![light1](./docs/light1.png)
+
+![light2](./docs/light2.png)
