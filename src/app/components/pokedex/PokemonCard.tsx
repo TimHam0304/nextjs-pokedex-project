@@ -3,7 +3,7 @@ import Image from "next/image";
 import { TYPECOLORS } from "@constants";
 import { Pokemon, PokemonType } from "@models/Pokemon/pokemon";
 import fallBackImage from "@public/fallback.jpg";
-import { LikeAndShareBox } from "../misc/LikeButton";
+import { LikeAndShareBox } from "../misc/LikeAndShareBox";
 
 export function PokemonCard({ Pokemon }: { Pokemon: Pokemon }) {
   return (
