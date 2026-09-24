@@ -30,7 +30,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
   }
 
   const { pokemonSpecies, status } = await getPokemonSpecies(
-    pokemon.species.name
+    pokemon.species.name,
   );
 
   if (!pokemonSpecies) {
@@ -45,19 +45,19 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
     TYPECOLORS[pokemon.types[0].type.name as keyof typeof TYPECOLORS] || "#333";
 
   const englishFlavorTexts = pokemonSpecies.flavor_text_entries.filter(
-    (entry) => entry.language.name === "en"
+    (entry) => entry.language.name === "en",
   );
 
   const englishGenus = pokemonSpecies.genera.find(
-    (entry) => entry.language.name === "en"
+    (entry) => entry.language.name === "en",
   )?.genus;
 
   const jpPokemonName = pokemonSpecies.names.find(
-    (entry) => entry.language.name === "ja"
+    (entry) => entry.language.name === "ja",
   )?.name;
 
   const roomajiPokemonName = pokemonSpecies.names.find(
-    (entry) => entry.language.name === "roomaji"
+    (entry) => entry.language.name === "ja-roma",
   )?.name;
 
   return (
@@ -260,7 +260,7 @@ export async function PokemonStatCard({ slug }: PokemonCardProps) {
                               </span>
                             </div>
                           );
-                        }
+                        },
                       )}
                     </div>
                   ) : (
