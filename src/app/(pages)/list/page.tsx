@@ -3,7 +3,7 @@ import { DividerWithCenterText } from "@components/misc/Divider";
 import { pokemonList } from "@/app/constants";
 import Link from "next/link";
 
-export default async function ListPage() {
+export default function ListPage() {
   const sortedList = pokemonList.slice().sort();
   let lastLetter = "";
   return (
